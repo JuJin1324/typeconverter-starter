@@ -37,7 +37,7 @@ public class ConversionServiceTest {
         String statusString = conversionService.convert(UserStatus.NEW, String.class);
         assertThat(statusString).isEqualTo("N");
 
-        UserStatus userStatus = conversionService.convert("N", UserStatus.class);
-        assertThat(userStatus).isEqualTo(UserStatus.NEW);
+        UserStatus userStatus = conversionService.convert("P", UserStatus.class);
+        assertThat(userStatus).isEqualTo(UserStatus.PLAIN);
     }
 }
