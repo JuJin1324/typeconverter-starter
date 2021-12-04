@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 
 @RestController
-public class HelloController {
+public class ConverterApiController {
 
     @GetMapping("/hello-v1")
     public String helloV1(HttpServletRequest request) {
