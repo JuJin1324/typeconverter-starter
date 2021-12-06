@@ -3,12 +3,12 @@ package practice.typeconverterstarter.controller;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import practice.typeconverterstarter.type.IpPort;
+import practice.typeconverterstarter.type.UserStatus;
 
 /**
  * Created by Yoo Ju Jin(jujin1324@daum.net)
@@ -17,6 +17,31 @@ import practice.typeconverterstarter.type.IpPort;
 
 @Controller
 public class ConverterController {
+
+    @GetMapping("/int")
+    public String requestParamInt(@RequestParam Integer data) {
+        System.out.println("data = " + data);
+        return "ok";
+    }
+
+    @GetMapping("/boolean")
+    public String requestParamBoolean(@RequestParam Boolean data) {
+        System.out.println("data = " + data);
+        return "ok";
+    }
+
+    @GetMapping("/ip-port")
+    public String requestParamIpPort(@RequestParam IpPort data) {
+        System.out.println("ipPort.getIp() = " + data.getIp());
+        System.out.println("ipPort.getPort() = " + data.getPort());
+        return "ok";
+    }
+
+    @GetMapping("/user-status")
+    public String requestParamUserStatus(@RequestParam UserStatus data) {
+        System.out.println("userStatus = " + data);
+        return "ok";
+    }
 
     @GetMapping("/converter-view")
     public String converterView(Model model) {
