@@ -13,7 +13,7 @@
 ### Converter 적용 대상
 > @Controller 에 주로 사용  
 > @RequestParam / @ModelAttribute 에 적용  
-> 주의: Request Body 에는 적용 안됨.
+> 주의: Request Body 에는 적용 안됨. REST API 적용 시 GET 의 RequestParam 에서만 사용 가능
 
 ### Converter 생성
 > 사용자 정의 컨버터 생성시 `org.springframework.core.convert.converter.Converter` 인터페이스를 implements 하여
@@ -41,7 +41,7 @@
 ### Formatter 적용 대상
 > @Controller 에 주로 사용  
 > @RequestParam / @ModelAttribute 에 적용  
-> 주의: Request Body 에는 적용 안됨.
+> 주의: Request Body 에는 적용 안됨. REST API 적용 시 GET 의 RequestParam 에서만 사용 가능
 
 ### th:text
 > 타임리프에서 변수 사용 시 ${{변수명}} 으로 사용하면 포맷터가 적용된다.
