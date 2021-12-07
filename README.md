@@ -12,7 +12,7 @@
 ## 사용자 정의 Converter
 ### Converter 적용 대상
 > @Controller 에 주로 사용  
-> @RequestParam / @ModelAttribute 에 적용  
+> @RequestParam / @ModelAttribute / view template 에 적용   
 > 주의: Request Body 에는 적용 안됨. REST API 적용 시 GET 의 RequestParam 에서만 사용 가능
 
 ### Converter 생성
@@ -40,7 +40,7 @@
 ## Formatter
 ### Formatter 적용 대상
 > @Controller 에 주로 사용  
-> @RequestParam / @ModelAttribute 에 적용  
+**> @RequestParam / @ModelAttribute / view template 에 적용  
 > 주의: Request Body 에는 적용 안됨. REST API 적용 시 GET 의 RequestParam 에서만 사용 가능
 
 ### th:text
